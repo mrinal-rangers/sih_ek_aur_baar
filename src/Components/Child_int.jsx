@@ -20,7 +20,7 @@ const Child = (props) => {
       <form onSubmit={handleClick}>
       <div className='child_int'>
         <h4 id='option'>Enter Value: </h4>
-        <input type="text" id="inputField"/>
+        <input type="number" id="inputField"/>
         <button type="submit" >SUBMIT</button>
       </div>
       </form>
