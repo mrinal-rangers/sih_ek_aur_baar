@@ -1,0 +1,38 @@
+[
+    {
+        "type": "gio",
+        "id" : 1,
+        "name": "Lock screen notifications",
+        "description": "Show notifications on the lock screen",
+        "value_type": "bool",
+        "schema": "org.gnome.desktop.notifications",
+        "key": "show-in-lock-screen"
+    },
+    {
+        "type": "gio",
+        "id" : 2,
+        "name": "Boost volume",
+        "description": "Allow boosting volume above 100%",
+        "value_type": "bool",
+        "schema": "org.gnome.desktop.sound",
+        "key": "allow-volume-above-100-percent"
+    },
+    {
+        "type": "gio",
+        "id" : 3,
+        "name": "USBGuard Service",
+        "description": "If the USBGuard service is present and this setting is enabled, USB devices will be protected as configured in the usb-protection-level setting.",
+        "value_type": "bool",
+        "schema": "org.gnome.desktop.privacy",
+        "key": "usb-protection"
+    },
+    {
+        "type": "gio",
+        "id" : 4,
+        "name": "Show battery percentage",
+        "description": "Show battery percentage in the top bar",
+        "value_type": "bool",
+        "schema": "org.gnome.desktop.interface",
+        "key": "show-battery-percentage"
+    }
+]
