@@ -1,13 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.scss';
 
 const Child = (props) => {
-  const currId=props.id
+  const [inputValue, setInputValue] = useState('50'); // Initialize state for input value
+
   const handleClick = (e) => {
-    e.preventDefault(); 
-    const inputValue = document.getElementById('inputField').value;
-    console.log(inputValue)
-    props.myArray[currId] = inputValue;
+    e.preventDefault();
+    props.myArray[props.id] = inputValue; // Use props.id to update the correct position in the array
     console.log(props.myArray);
   };
 
@@ -18,11 +17,18 @@ const Child = (props) => {
       <h5>{props.description}</h5>
 
       <form onSubmit={handleClick}>
-      <div className='child_int'>
-        <h4 id='option'>Enter Value: </h4>
-        <input type="number" id="inputField"/>
-        <button type="submit" >SUBMIT</button>
-      </div>
+        <div className='child_int'>
+          <h4 id='option'>Enter Value : {inputValue} </h4>
+          <input
+            type="range"
+            id="inputField"
+            min={0}
+            max={100}
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)} // Update state on input change
+          />
+          <button type="submit">SUBMIT</button>
+        </div>
       </form>
     </div>
   );
