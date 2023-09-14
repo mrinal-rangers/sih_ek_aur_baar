@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './style.scss';
 
 const Child = (props) => {
-  const [inputValue, setInputValue] = useState('50'); // Initialize state for input value
+  const [inputValue, setInputValue] = useState(''); // Initialize state for input value
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -18,12 +18,10 @@ const Child = (props) => {
 
       <form onSubmit={handleClick}>
         <div className='child_int'>
-          <h4 id='option'>Enter Value : {inputValue} </h4>
+          <h4 id='option'>Enter Value: </h4>
           <input
-            type="range"
+            type="number"
             id="inputField"
-            min={0}
-            max={100}
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)} // Update state on input change
           />
